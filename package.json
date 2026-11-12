@@ -1,0 +1,21 @@
+{
+  "name": "quiz-survival-hoa-hoc-challenge",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Real-time chemistry quiz with scoring, leaderboard and per-option explanations using Node.js, Express and Socket.IO",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "socket.io": "^4.8.1"
+  }
+}

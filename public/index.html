@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c36">
+  <title>Hoá học Challenge – Quiz Survival</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/js/music.js" defer></script>
+  <script src="/js/player.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="brand">
+      <div class="brand-mark">H₂O</div>
+      <div>
+        <p class="eyebrow">HOÁ HỌC 10 · BẢNG TUẦN HOÀN</p>
+        <h1>HOÁ HỌC CHALLENGE</h1>
+        <p id="subheading" class="subheading">10 câu hỏi · 20 giây mỗi câu · Đúng +10 điểm</p>
+      </div>
+    </header>
+
+    <section id="joinPanel" class="panel">
+      <h2>Tham gia trò chơi</h2>
+      <p class="muted">Nhập thông tin để vào phòng thi. Mỗi người chỉ sử dụng một thiết bị trong suốt trò chơi.</p>
+      <form id="joinForm">
+        <label for="playerName">Họ và tên</label>
+        <input id="playerName" name="playerName" maxlength="40" minlength="2" required placeholder="Ví dụ: Nguyễn Văn An">
+        <label for="className">Lớp / đơn vị <span class="muted">(không bắt buộc)</span></label>
+        <input id="className" name="className" maxlength="30" placeholder="Ví dụ: 10A1">
+        <button class="button primary full" type="submit">Vào phòng chơi</button>
+      </form>
+      <p id="joinMessage" class="message" role="status"></p>
+    </section>
+
+    <section id="gamePanel" class="panel hidden">
+      <div class="player-strip">
+        <div>
+          <span class="muted small">NGƯỜI CHƠI</span>
+          <strong id="displayName">—</strong>
+        </div>
+        <span id="scoreLabel" class="status-pill score-pill">0 điểm</span>
+      </div>
+
+      <div class="round-row">
+        <span id="roundLabel">Chưa bắt đầu</span>
+        <span id="rankLabel" class="rank-label"></span>
+        <button id="musicToggle" type="button" class="music-toggle" aria-pressed="false">🔇 Nhạc: Tắt</button>
+      </div>
+
+      <div id="timerWrap" class="timer-wrap hidden">
+        <div id="timer" class="timer">00:20</div>
+        <div class="timer-track"><div id="timerBar" class="timer-bar"></div></div>
+      </div>
+
+      <div id="waitingBox" class="notice">
+        <h2>Đã vào phòng thành công!</h2>
+        <p>Vui lòng chờ ban tổ chức bắt đầu trò chơi.</p>
+        <p id="playerCount" class="muted"></p>
+      </div>
+
+      <div id="questionBox" class="hidden">
+        <p class="eyebrow">CÂU HỎI HIỆN TẠI</p>
+        <h2 id="questionText" class="question-text"></h2>
+        <img id="questionImage" class="question-image hidden" alt="Hình minh hoạ cho câu hỏi" decoding="async">
+        <div id="options" class="options-grid"></div>
+        <p id="answerMessage" class="message" role="status"></p>
+      </div>
+
+      <div id="resultBox" class="notice hidden"></div>
+      <div id="finalBox" class="notice champion hidden"></div>
+    </section>
+
+    <footer>
+      <span>HOÁ HỌC CHALLENGE · QUIZ SURVIVAL</span>
+      <span id="connectionState">Đang kết nối...</span>
+    </footer>
+  </main>
+</body>
+</html>

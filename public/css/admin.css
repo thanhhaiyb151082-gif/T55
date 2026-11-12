@@ -1,0 +1,54 @@
+ .admin-header { margin: 8px 0 25px; }
+.admin-header h1 { font-size: clamp(23px, 4vw, 34px); }
+.admin-header h1 span { color: var(--cyan); }
+.text-link { color: var(--cyan); text-decoration: none; font-size: 13px; white-space: nowrap; }
+.login-panel { max-width: 460px; margin: 0 auto 20px; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+.stat-card { padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: var(--panel); }
+.stat-card span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.stat-card strong { font-size: 23px; font-variant-numeric: tabular-nums; }
+.control-panel { display: flex; justify-content: space-between; gap: 20px; align-items: center; flex-wrap: wrap; }
+.button-row { display: flex; flex-wrap: wrap; gap: 9px; }
+.button-row .button { font-size: 13px; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 570px; font-size: 13px; }
+th, td { padding: 12px 10px; text-align: left; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.tag { display: inline-block; border-radius: 20px; padding: 5px 9px; font-size: 11px; font-weight: 800; background: #273b5f; }
+.tag.active { color: #7af0c0; background: #163e38; }
+.tag.spectator { color: #ffd58b; background: #4a3820; }
+.tag.champion { color: #ffe18b; background: #4b3d1c; }
+.result-list { display: grid; gap: 8px; }
+.result-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-radius: 10px; background: #0d1930; }
+.result-item strong { color: var(--cyan); }
+.champion-name { color: var(--gold); }
+@media (max-width: 650px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .control-panel { align-items: stretch; }
+  .button-row { display: grid; grid-template-columns: 1fr; }
+  .admin-header { align-items: flex-start; flex-direction: column; }
+}
+.inline-check { display: flex; align-items: center; gap: 8px; font-weight: 500; margin-top: 2px; cursor: pointer; }
+.inline-check input { width: auto; padding: 0; }
+#logoutButton { background: #273b5f; }
+
+/* ===== Chế độ tính điểm (admin) ===== */
+.q-options { display: grid; gap: 8px; }
+.q-option { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: #0d1930; }
+.q-option b { display: inline-grid; place-items: center; width: 27px; height: 27px; border-radius: 8px; background: #365da9; }
+.q-option.correct { border-color: var(--green); background: #0f2d2a; }
+.q-option.correct b { background: #1f8a62; }
+.q-option span:not(.badge) { flex: 1 1 140px; }
+.dist { display: grid; gap: 6px; margin: 4px 0 16px; }
+.dist-row { display: grid; grid-template-columns: 64px 1fr 36px; gap: 10px; align-items: center; font-size: 13px; }
+.dist-bar { height: 14px; border-radius: 8px; background: #0d1930; overflow: hidden; }
+.dist-fill { height: 100%; width: 0; background: #4d6fb5; border-radius: 8px; transition: width .3s; }
+.dist-fill.correct { background: var(--green); }
+.dist-count { text-align: right; font-variant-numeric: tabular-nums; }
+.score-cell { color: var(--gold); font-weight: 800; }
+.podium { display: grid; gap: 10px; max-width: 460px; margin: 14px auto 0; text-align: left; }
+.podium-row { display: grid; grid-template-columns: 40px 1fr auto; gap: 10px; align-items: center; padding: 12px 14px; border-radius: 12px; background: rgba(13,25,48,.8); }
+.podium-medal { font-size: 26px; text-align: center; }
+.podium-score { color: var(--gold); }
+.stats-grid .stat-card strong { overflow-wrap: anywhere; }
+@media (min-width: 651px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }

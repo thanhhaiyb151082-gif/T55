@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "question": "Theo định luật tuần hoàn, tính chất của các đơn chất và hợp chất biến đổi tuần hoàn theo chiều tăng dần của đại lượng nào?",
+    "options": {
+      "A": "Khối lượng nguyên tử",
+      "B": "Điện tích hạt nhân nguyên tử",
+      "C": "Số neutron trong hạt nhân",
+      "D": "Bán kính nguyên tử"
+    },
+    "correctAnswer": "B",
+    "explanations": {
+      "A": "Chưa đúng. Đây là cơ sở sắp xếp của Mendeleev (thế kỉ XIX). Về sau người ta thấy sắp xếp theo khối lượng làm một số cặp bị đảo vị trí (ví dụ Ar có khối lượng lớn hơn K nhưng phải đứng trước K), nên bảng hiện đại sắp xếp theo điện tích hạt nhân.",
+      "B": "Đúng. Định luật tuần hoàn hiện đại: tính chất của các đơn chất, thành phần và tính chất của các hợp chất tạo nên từ các nguyên tố biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân nguyên tử. Sự tuần hoàn bắt nguồn từ việc cấu hình electron lớp ngoài cùng lặp lại theo chu kì.",
+      "C": "Chưa đúng. Số neutron không quyết định tính chất hoá học. Các đồng vị của cùng một nguyên tố có số neutron khác nhau nhưng tính chất hoá học gần như giống nhau.",
+      "D": "Chưa đúng. Bán kính nguyên tử là một tính chất biến đổi tuần hoàn (là kết quả), chứ không phải đại lượng làm cơ sở để sắp xếp các nguyên tố."
+    }
+  },
+  {
+    "id": 2,
+    "question": "Số thứ tự của chu kì trong bảng tuần hoàn bằng đại lượng nào của nguyên tử?",
+    "options": {
+      "A": "Số electron ở lớp ngoài cùng",
+      "B": "Số proton trong hạt nhân",
+      "C": "Số electron độc thân",
+      "D": "Số lớp electron"
+    },
+    "correctAnswer": "D",
+    "explanations": {
+      "A": "Chưa đúng. Số electron lớp ngoài cùng cho biết số thứ tự của nhóm A, không phải của chu kì.",
+      "B": "Chưa đúng. Số proton chính là số hiệu nguyên tử Z, quyết định số thứ tự của ô nguyên tố trong bảng tuần hoàn.",
+      "C": "Chưa đúng. Số electron độc thân (chưa ghép đôi) không dùng để xếp chu kì hay nhóm.",
+      "D": "Đúng. Các nguyên tử có cùng số lớp electron được xếp vào cùng một hàng (chu kì), nên số thứ tự chu kì bằng số lớp electron. Ví dụ Na (2/8/1) có 3 lớp electron nên ở chu kì 3."
+    }
+  },
+  {
+    "id": 3,
+    "question": "Nguyên tử của nguyên tố X có cấu hình electron 1s²2s²2p⁶3s²3p⁵. Vị trí của X trong bảng tuần hoàn là gì?",
+    "options": {
+      "A": "Chu kì 3, nhóm VIIA",
+      "B": "Chu kì 3, nhóm VA",
+      "C": "Chu kì 4, nhóm VIIA",
+      "D": "Chu kì 2, nhóm VIIA"
+    },
+    "correctAnswer": "A",
+    "explanations": {
+      "A": "Đúng. Cấu hình có 3 lớp electron nên ở chu kì 3. Lớp ngoài cùng có 2 + 5 = 7 electron (3s²3p⁵) và electron cuối cùng điền vào phân lớp p, nên X là nguyên tố p thuộc nhóm VIIA. X là chlorine (Cl).",
+      "B": "Chưa đúng. Chu kì 3 là đúng nhưng nhóm VA ứng với 5 electron lớp ngoài cùng. Cần cộng cả 2 electron của 3s với 5 electron của 3p để được 7 electron, tức nhóm VIIA.",
+      "C": "Chưa đúng. Nhóm VIIA là đúng nhưng cấu hình chỉ có 3 lớp electron (lớp cao nhất là n = 3) nên X ở chu kì 3, không phải chu kì 4.",
+      "D": "Chưa đúng. Chu kì 2 ứng với nguyên tử có 2 lớp electron (như F: 1s²2s²2p⁵). Cấu hình của X có lớp thứ 3 nên X ở chu kì 3."
+    }
+  },
+  {
+    "id": 4,
+    "question": "Các nguyên tố F, Cl, Br, I thuộc cùng một nhóm. Nhóm đó và tên gọi chung của chúng là gì?",
+    "options": {
+      "A": "Nhóm VIA – chalcogen",
+      "B": "Nhóm VIIIA – khí hiếm",
+      "C": "Nhóm VIIA – halogen",
+      "D": "Nhóm IA – kim loại kiềm"
+    },
+    "correctAnswer": "C",
+    "explanations": {
+      "A": "Chưa đúng. Nhóm VIA gồm O, S, Se, Te (chalcogen), nguyên tử có 6 electron ở lớp ngoài cùng, trong khi F, Cl, Br, I có 7 electron.",
+      "B": "Chưa đúng. Nhóm VIIIA gồm các khí hiếm He, Ne, Ar, Kr,... có lớp ngoài cùng bền vững (8 electron, riêng He có 2) nên rất trơ về mặt hoá học.",
+      "C": "Đúng. F, Cl, Br, I đều có 7 electron lớp ngoài cùng (ns²np⁵) nên thuộc nhóm VIIA, gọi chung là halogen. Chúng là các phi kim điển hình, dễ nhận 1 electron để tạo ion X⁻.",
+      "D": "Chưa đúng. Nhóm IA (trừ H) gồm Li, Na, K,... là các kim loại kiềm, chỉ có 1 electron lớp ngoài cùng và dễ nhường 1 electron."
+    }
+  },
+  {
+    "id": 5,
+    "question": "Nguyên tử Fe (Z = 26) có cấu hình electron [Ar]3d⁶4s². Fe thuộc loại nguyên tố nào và nằm ở vị trí nào trong bảng tuần hoàn?",
+    "options": {
+      "A": "Nguyên tố d, chu kì 4, nhóm VIIIB",
+      "B": "Nguyên tố s, chu kì 4, nhóm IIA",
+      "C": "Nguyên tố d, chu kì 3, nhóm VIB",
+      "D": "Nguyên tố p, chu kì 4, nhóm VIIIA"
+    },
+    "correctAnswer": "A",
+    "explanations": {
+      "A": "Đúng. Electron cuối cùng điền vào phân lớp 3d nên Fe là nguyên tố d (thuộc nhóm B). Fe có 4 lớp electron nên ở chu kì 4. Tổng số electron hoá trị 3d⁶4s² = 8 nên Fe thuộc nhóm VIIIB.",
+      "B": "Chưa đúng. Cách chọn này chỉ xét 4s² nên nhầm là nguyên tố s, nhóm IIA. Loại nguyên tố được xác định bởi phân lớp được điền electron cuối cùng, ở Fe là phân lớp 3d.",
+      "C": "Chưa đúng. Loại d là đúng nhưng chu kì được xác định bằng số lớp electron (lớp cao nhất n = 4), không phải bằng lớp chứa phân lớp 3d. Ngoài ra, nhóm VIB ứng với 6 electron hoá trị, còn Fe có 3d⁶4s² = 8 electron hoá trị.",
+      "D": "Chưa đúng. Electron cuối cùng của Fe không điền vào phân lớp p nên Fe không phải nguyên tố p. Nhóm VIIIA là nhóm khí hiếm, còn Fe là kim loại chuyển tiếp thuộc nhóm B."
+    }
+  },
+  {
+    "id": 6,
+    "question": "Trong một chu kì, theo chiều tăng dần của điện tích hạt nhân, bán kính nguyên tử và tính kim loại biến đổi như thế nào?",
+    "options": {
+      "A": "Bán kính tăng dần, tính kim loại tăng dần",
+      "B": "Bán kính giảm dần, tính kim loại giảm dần",
+      "C": "Bán kính tăng dần, tính kim loại giảm dần",
+      "D": "Bán kính giảm dần, tính kim loại tăng dần"
+    },
+    "correctAnswer": "B",
+    "explanations": {
+      "A": "Chưa đúng. Cả hai xu hướng đều bị đảo ngược. Trong một chu kì, điện tích hạt nhân tăng còn số lớp electron không đổi nên hạt nhân hút electron mạnh hơn, làm bán kính giảm chứ không tăng.",
+      "B": "Đúng. Trong một chu kì, điện tích hạt nhân tăng, số lớp electron không đổi nên lực hút giữa hạt nhân và electron lớp ngoài cùng tăng. Bán kính nguyên tử giảm, nguyên tử khó nhường electron hơn nên tính kim loại giảm (tính phi kim tăng). Ví dụ: Na là kim loại mạnh, Cl là phi kim mạnh.",
+      "C": "Chưa đúng. Tính kim loại giảm là đúng nhưng bán kính không tăng. Lực hút của hạt nhân tăng làm bán kính nguyên tử giảm dần.",
+      "D": "Chưa đúng. Bán kính giảm là đúng nhưng nguyên tử nhỏ hơn giữ electron ngoài cùng chặt hơn, khó nhường electron nên tính kim loại giảm, không tăng."
+    }
+  },
+  {
+    "id": 7,
+    "question": "Trong một nhóm A, theo chiều tăng dần của điện tích hạt nhân, bán kính nguyên tử và độ âm điện biến đổi như thế nào?",
+    "options": {
+      "A": "Bán kính tăng dần, độ âm điện giảm dần",
+      "B": "Bán kính giảm dần, độ âm điện tăng dần",
+      "C": "Bán kính tăng dần, độ âm điện tăng dần",
+      "D": "Bán kính giảm dần, độ âm điện giảm dần"
+    },
+    "correctAnswer": "A",
+    "explanations": {
+      "A": "Đúng. Trong một nhóm A, từ trên xuống dưới số lớp electron tăng nên bán kính nguyên tử tăng. Electron ngoài cùng ở xa hạt nhân hơn nên lực hút giảm, độ âm điện giảm. Ví dụ ở nhóm VIIA: F có độ âm điện lớn nhất (3,98), I nhỏ hơn (2,66).",
+      "B": "Chưa đúng. Đây là xu hướng trong một chu kì (đi từ trái sang phải), không phải trong một nhóm. Cần phân biệt rõ xu hướng theo chu kì và theo nhóm.",
+      "C": "Chưa đúng. Bán kính tăng là đúng, nhưng nguyên tử càng lớn thì hạt nhân càng hút electron yếu đi nên độ âm điện giảm chứ không tăng.",
+      "D": "Chưa đúng. Trong một nhóm, số lớp electron tăng dần nên bán kính nguyên tử phải tăng, không thể giảm."
+    }
+  },
+  {
+    "id": 8,
+    "question": "Dãy nào sau đây sắp xếp đúng các nguyên tố theo chiều độ âm điện tăng dần?",
+    "options": {
+      "A": "F < O < N < C",
+      "B": "N < C < O < F",
+      "C": "C < O < N < F",
+      "D": "C < N < O < F"
+    },
+    "correctAnswer": "D",
+    "explanations": {
+      "A": "Chưa đúng. Dãy này xếp theo chiều độ âm điện giảm dần, ngược với yêu cầu của đề bài (tăng dần).",
+      "B": "Chưa đúng. Sai vị trí của N và C. N (Z = 7) đứng sau C (Z = 6) trong chu kì 2 nên độ âm điện của N (3,04) lớn hơn C (2,55).",
+      "C": "Chưa đúng. Sai vị trí của O và N. O (Z = 8) đứng sau N (Z = 7) trong chu kì 2 nên độ âm điện của O (3,44) lớn hơn N (3,04).",
+      "D": "Đúng. C, N, O, F cùng thuộc chu kì 2 và điện tích hạt nhân tăng dần từ C (Z = 6) đến F (Z = 9) nên độ âm điện tăng dần: C (2,55) < N (3,04) < O (3,44) < F (3,98). F là nguyên tố có độ âm điện lớn nhất."
+    }
+  },
+  {
+    "id": 9,
+    "question": "Nguyên tố R thuộc nhóm VIA. Công thức oxide cao nhất và công thức hợp chất khí với hydrogen của R lần lượt là gì?",
+    "options": {
+      "A": "RO₂ và RH₄",
+      "B": "R₂O₅ và RH₃",
+      "C": "RO₃ và RH₂",
+      "D": "R₂O₇ và RH"
+    },
+    "correctAnswer": "C",
+    "explanations": {
+      "A": "Chưa đúng. RO₂ và RH₄ là công thức của nhóm IVA (hoá trị cao nhất là 4), ví dụ CO₂ và CH₄.",
+      "B": "Chưa đúng. R₂O₅ và RH₃ là công thức của nhóm VA (hoá trị cao nhất là 5), ví dụ N₂O₅ và NH₃.",
+      "C": "Đúng. Nhóm VIA có 6 electron lớp ngoài cùng nên hoá trị cao nhất với oxygen là 6, oxide cao nhất là RO₃ (ví dụ SO₃). Hoá trị với hydrogen là 8 − 6 = 2 nên hợp chất khí với hydrogen là RH₂ (ví dụ H₂S).",
+      "D": "Chưa đúng. R₂O₇ và RH là công thức của nhóm VIIA (hoá trị cao nhất là 7), ví dụ Cl₂O₇ và HCl."
+    }
+  },
+  {
+    "id": 10,
+    "question": "Trong các hợp chất sau của các nguyên tố thuộc chu kì 3, chất nào có tính acid mạnh nhất?",
+    "options": {
+      "A": "NaOH",
+      "B": "Al(OH)₃",
+      "C": "H₃PO₄",
+      "D": "HClO₄"
+    },
+    "correctAnswer": "D",
+    "explanations": {
+      "A": "Chưa đúng. NaOH (Na thuộc nhóm IA) là base mạnh, hầu như không có tính acid.",
+      "B": "Chưa đúng. Al(OH)₃ là hydroxide lưỡng tính (phản ứng được với cả acid và base), tính acid rất yếu.",
+      "C": "Chưa đúng. H₃PO₄ là acid có độ mạnh trung bình. P đứng trước Cl trong chu kì 3 nên tính phi kim của P yếu hơn Cl, và H₃PO₄ có tính acid yếu hơn HClO₄.",
+      "D": "Đúng. Trong chu kì 3, từ Na đến Cl tính phi kim tăng dần nên tính base của oxide và hydroxide giảm dần, tính acid tăng dần. Cl đứng cuối chu kì 3 (nhóm VIIA) nên HClO₄ có tính acid mạnh nhất trong các chất đã cho."
+    }
+  }
+]

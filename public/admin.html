@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c36">
+  <title>Quản trị – Hoá học Challenge</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/js/music.js" defer></script>
+  <script src="/js/admin.js" defer></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">BẢNG ĐIỀU KHIỂN SỰ KIỆN</p>
+        <h1>HOÁ HỌC CHALLENGE <span>ADMIN</span></h1>
+      </div>
+      <div class="header-actions">
+        <button id="musicToggle" type="button" class="music-toggle" aria-pressed="false">🔊 Nhạc: Bật</button>
+        <a class="text-link" href="/" target="_blank" rel="noopener">Mở trang người chơi ↗</a>
+      </div>
+    </header>
+
+    <section id="loginPanel" class="panel login-panel">
+      <h2>Đăng nhập quản trị</h2>
+      <p class="muted">Nhập mật khẩu ADMIN_PASSWORD đã cấu hình trên máy chủ (Render &gt; Environment).</p>
+      <form id="adminLoginForm" autocomplete="off">
+        <label for="adminPassword">Mật khẩu quản trị</label>
+        <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password"
+               autocapitalize="off" autocorrect="off" spellcheck="false" required>
+        <label class="inline-check"><input id="showPassword" type="checkbox"> Hiện mật khẩu</label>
+        <button id="loginButton" class="button primary full" type="submit">Đăng nhập</button>
+      </form>
+      <p id="loginMessage" class="message" role="status"></p>
+    </section>
+
+    <div id="dashboard" class="hidden">
+      <section class="stats-grid">
+        <article class="stat-card"><span>Trạng thái</span><strong id="gameStatus">Chờ</strong></article>
+        <article class="stat-card"><span>Câu hiện tại</span><strong id="roundNumber">0 / 10</strong></article>
+        <article class="stat-card"><span>Người chơi</span><strong id="playerCountStat">0</strong></article>
+        <article class="stat-card"><span>Đang trực tuyến</span><strong id="onlineCount">0</strong></article>
+        <article class="stat-card"><span>Đã trả lời</span><strong id="answeredCount">0</strong></article>
+        <article class="stat-card"><span>Thời gian</span><strong id="adminTimer">—</strong></article>
+      </section>
+
+      <section class="panel control-panel">
+        <div>
+          <p class="eyebrow">ĐIỀU KHIỂN TRÒ CHƠI</p>
+          <h2 id="controlTitle">Sẵn sàng bắt đầu</h2>
+          <p id="controlHint" class="muted">Người chơi có thể đăng ký trước khi bắt đầu câu 1.</p>
+        </div>
+        <div class="button-row">
+          <button id="startButton" class="button primary">Bắt đầu câu 1</button>
+          <button id="nextButton" class="button primary" disabled>Chuyển câu tiếp theo</button>
+          <button id="exportButton" class="button" disabled>Xuất CSV</button>
+          <button id="resetButton" class="button danger">Đặt lại trò chơi</button>
+          <button id="logoutButton" class="button">Đăng xuất</button>
+        </div>
+        <p id="actionMessage" class="message" role="status"></p>
+      </section>
+
+      <section id="podiumPanel" class="panel champion hidden">
+        <p class="eyebrow">KẾT THÚC TRÒ CHƠI</p>
+        <h2>🏆 TOP 3</h2>
+        <div id="podiumList" class="podium"></div>
+      </section>
+
+      <section id="questionPanel" class="panel hidden">
+        <p class="eyebrow" id="questionEyebrow">CÂU HỎI HIỆN TẠI</p>
+        <h2 id="adminQuestionText" class="question-text"></h2>
+        <div id="adminOptions" class="q-options"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">KẾT QUẢ</p><h2>Kết quả vòng vừa chấm</h2></div>
+        </div>
+        <div id="roundResult" class="muted">Chưa có kết quả.</div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">XẾP HẠNG</p><h2>Bảng xếp hạng</h2></div>
+          <span id="playerTotal" class="muted">0 người</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Hạng</th><th>Họ tên</th><th>Lớp / đơn vị</th><th>Điểm</th><th>Số câu đúng</th><th>Tổng TG câu đúng</th><th>Kết nối</th></tr></thead>
+            <tbody id="playersTable"><tr><td colspan="7" class="muted">Chưa có người chơi.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">THỐNG KÊ</p><h2>Thống kê theo từng câu</h2></div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Câu</th><th>Đáp án đúng</th><th>Tỉ lệ đúng</th><th>A</th><th>B</th><th>C</th><th>D</th><th>Bỏ trống</th></tr></thead>
+            <tbody id="summaryTable"><tr><td colspan="8" class="muted">Chưa có câu nào được chấm.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <footer><span>HOÁ HỌC CHALLENGE · ADMIN</span><span id="connectionState">Đang kết nối...</span></footer>
+  </main>
+</body>
+</html>
